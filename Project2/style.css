@@ -1,0 +1,77 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  background-color: #eff5ef;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body,
+.drop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.drop {
+  height: 300px;
+  width: 500px;
+  /* min-height: 200px; */
+  border: 2px dashed #0288d147;
+  margin: 30px;
+  border-radius: 10px;
+  transition: all.2s ease;
+}
+
+.drop .dragged {
+  background-color: rgb(109, 140, 243);
+  border-color: blue;
+}
+
+#fileInput {
+  display: none;
+}
+
+.browse_btn {
+  color: rgb(109, 140, 243);
+  cursor: pointer;
+}
+
+.Upoload_Box {
+  background: #ffffff;
+  box-shadow: 0px 20px 20px #f0e1e12e;
+  border-radius: 25px;
+  margin: 75px auto;
+}
+
+.iconCont {
+  width: 75px;
+  height: 100px;
+  position: relative;
+}
+
+.iconCont img {
+  width: 75px;
+  position: absolute;
+  transform-origin: bottom;
+}
+
+.iconCont .center {
+  z-index: 2;
+}
+
+.dragged .iconCont .right {
+  transform: rotate(10deg) translateX(20px) scale(0.9);
+  transform-origin: bottom;
+  filter: grayscale(0.5);
+}
+
+.dragged .iconCont .left {
+  transform: rotate(-10deg) translateX(-20px);
+  transform-origin: bottom;
+  filter: grayscale(0.5);
+}
+
+.dragged .iconCont .center {
+  transform: translateY(-5px);
+}
